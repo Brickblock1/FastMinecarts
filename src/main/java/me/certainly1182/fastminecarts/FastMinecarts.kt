@@ -37,9 +37,6 @@ class FastMinecarts : JavaPlugin(), Listener {
         if (event.vehicle !is Minecart) return
 
         val minecart = event.vehicle as Minecart
-        if (minecart.isEmpty) return
-        if (minecart.passengers.first() !is Player) return
-
         val railBlock = event.vehicle.location.block
         if (railBlock.type !in railTypes) return
 
